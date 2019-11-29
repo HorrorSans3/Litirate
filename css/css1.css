@@ -1,0 +1,35 @@
+#welcome{
+	font-family: "Times New Roman", Times, serif;
+	color: #e6e6ff;
+	font-size: 80px;
+	margin-top: 80px;
+	-webkit-text-stroke: 1px black;
+}
+#title{
+	font-family: cursive;
+	color: #0000e6;
+	font-size: 90px;
+	margin-top: 0px;
+}
+#sub{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 30px;
+}
+#login{
+	height: 50px;
+	width: 110px;
+	font-size: 30px;
+	font-family: cursive;
+	margin-top: 100px;
+	margin-left: 180px;
+	border-style: outset;
+	border-radius: 5px;
+}
+#signin{
+	height: 50px;
+	width: 110px;
+	font-size: 30px;
+	font-family: cursive;
+	margin-left: 200px;
+	margin-right: 200px;
+}
