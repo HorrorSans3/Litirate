@@ -6,10 +6,11 @@
 	if(!isset($_SESSION['user'])){
 		header("location:index.php");
 	}
-	$conn = new mysqli($host, $username, $password, $mydatabase);
-	$sql = "SELECT id, firstname, lastname FROM writers";
-	$result = $conn->query($sql);
+	$result = $conn->query("SELECT * FROM litirate.writers ORDER BY ID DESC");
  ?>
+<button id="backbutton" ><a href="logout.php">Log Out</a></button>
+
+
 <center><h1 id="welcome">Welcome </h1>
 <p></p>
 </center>

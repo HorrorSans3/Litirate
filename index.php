@@ -4,7 +4,9 @@
 	include_once ('config.php');
 	$title = "Lit-I-Rate";
 	include_once ('header.php');
-
+if (isset($_SESSION['user'])){
+    header("location:home.php");
+}
 ?>
 <div id="head">
 
