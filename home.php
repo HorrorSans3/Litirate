@@ -7,12 +7,16 @@
 		header("location:index.php");
 	}
 	$result = $conn->query("SELECT * FROM litirate.writers ORDER BY ID DESC");
+	$row = $result->fetch(PDO::FETCH_ASSOC)  ;		
+	$username = $row['username'];
+	
+	
  ?>
 <button id="backbutton" ><a href="logout.php">Log Out</a></button>
 
 
-<center><h1 id="welcome">Welcome </h1>
-<p></p>
+<center><h1 id="welcome">Welcome <?php echo $username; ?></h1>
+
 </center>
 
 
