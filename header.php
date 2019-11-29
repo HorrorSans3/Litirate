@@ -87,6 +87,7 @@
 	margin-left: 30px;
 	border-radius: 10px;
 	background: #cce6ff;
+	width: 150px;
 }
 #genderinput{
 	margin-left: 60px;
@@ -104,9 +105,26 @@
 	border-style: inset;
 }
 #ageinput{
-	margin-left: 30px;
+	margin-left: 100px;
 	border-radius: 10px;
 	background: #cce6ff;
+	width: 150px;
+}
+#signbut{
+	font-family: cursive;
+	border-style: outset;
+	border-radius: 15px;
+	background-color: #005ce6;
+	color: white;
+	height: 30px;
+	width: 80px;
+	font-size: 15px;
+}
+#signbut:hover{
+	background-color: #66a3ff;
+	border-style: inset;
+	-webkit-text-stroke: .5px black;
+	color: black;
 }
 
 

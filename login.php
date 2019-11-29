@@ -10,11 +10,11 @@
 <h1 id="logtitle">Login</h1></center>
 
 <form action="login.php" method="POST">
-	<center><br><br>
+	<br><br>
 	<label id="loginusername">Username:  </label><input type="text" name="username" id="logininput" placeholder="username"><br><br>
-	<label id="loginpassword">Password:  </label><input type="Password" name="password" id="logininput" placeholder="password">
+	<label id="loginusername">Password:  </label><input type="Password" name="password" id="logininput" placeholder="password">
 
-</center>
+
 </form>
 
 <script type="text/javascript" src="js/scripts.js"></script>
