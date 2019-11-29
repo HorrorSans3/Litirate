@@ -7,9 +7,7 @@
 	$unerr = "username";
 	$perr = "password";
 	$aerr = "13~90";
-if(isset($_SESSION['ID'])){
-    header("location:home.php");
-}
+
 
 if(isset($_POST['signin'])){
     $username = $_POST['username'];
@@ -42,14 +40,9 @@ if(isset($_POST['signin'])){
     $query -> bindParam(':pgender', $gender);
     $query -> bindParam(':page', $age);
     $query ->execute();
-	$result = $query->rowCount();
-	if ($result > 0){
-    $_SESSION['ID'] = "ok";
-    header("location:home.php");
-	}
-	else{
-    $err_msg = "ERROR";
-	}  
+
+    header("location:aftersign.php");
+
 }
 }
 ?>

@@ -5,14 +5,15 @@
 	$title = "Login";
 	$unerr = "username";
 	$perr = "password";
+	$result = "";
 	include_once ('header.php');
 
 
-if (isset($_SESSION['username'])){
+if (isset($_SESSION['user'])){
     header("location:home.php");
 }
 
-if(isset($_POST['login'])){
+else if(isset($_POST['login'])){
 
 $username = $_POST['username'];
 $password = $_POST['password'];
@@ -29,10 +30,13 @@ $password = $_POST['password'];
 	$query -> bindParam(':ppassword', $password);
 	$query -> execute();
 	}
-}
-if (isset($_SESSION['username'])){
+	$result = $query->rowCount();
+	if ($result > 0){
+    $_SESSION['user'] = "ok";
     header("location:home.php");
 }
+}
+
 
 
 

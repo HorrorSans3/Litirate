@@ -42,6 +42,19 @@
 	-webkit-text-stroke: .5px black;
 
 }
+#loginsucc{
+	height: 50px;
+	width: 110px;
+	font-size: 25px;
+	font-family: cursive;
+	margin-top: 100px;
+	border-style: outset;
+	border-radius: 15px;
+	background-color: #005ce6;
+	color: white;
+	-webkit-text-stroke: .5px black;
+
+}
 #signin{
 	height: 50px;
 	width: 110px;
@@ -56,6 +69,12 @@
 	-webkit-text-stroke: .5px black;
 }
 #login:hover{
+	background-color: #66a3ff;
+	border-style: inset;
+	-webkit-text-stroke: .5px white;
+	color: black;
+}
+#loginsucc:hover{
 	background-color: #66a3ff;
 	border-style: inset;
 	-webkit-text-stroke: .5px white;
@@ -125,6 +144,14 @@
 	border-style: inset;
 	-webkit-text-stroke: .5px black;
 	color: black;
+}
+#succ{
+	color: #28a428;
+	-webkit-text-stroke: 1px #33cc33;
+	font-size: 80px;
+}
+#welcome{
+	
 }
 
 
