@@ -4,6 +4,9 @@
 	include_once ('config.php');
 	$title = "Sign up";
 	include_once ('header.php');
+	$unerr = "username";
+	$perr = "password";
+	$aerr = "13~90";
 if(isset($_SESSION['ID'])){
     header("location:home.php");
 }
@@ -39,7 +42,14 @@ if(isset($_POST['signin'])){
     $query -> bindParam(':pgender', $gender);
     $query -> bindParam(':page', $age);
     $query ->execute();
-	
+	$result = $query->rowCount();
+	if ($result > 0){
+    $_SESSION['ID'] = "ok";
+    header("location:home.php");
+	}
+	else{
+    $err_msg = "ERROR";
+	}  
 }
 }
 ?>
@@ -51,12 +61,12 @@ if(isset($_POST['signin'])){
 
 <form action="signin.php" method="POST">
 	<br><br>
-	<label id="loginusername">Username:  </label><input type="text" name="username" id="logininput" placeholder="username"><br><br>
-	<label id="loginusername">Password:  </label><input type="Password" name="password" id="logininput" placeholder="password"><br><br>
+	<label id="loginusername">Username:  </label><input type="text" name="username" id="logininput" placeholder="<?php echo $unerr; ?>"><br><br>
+	<label id="loginusername">Password:  </label><input type="Password" name="password" id="logininput" placeholder="<?php echo $perr; ?>"><br><br>
 	<label id="loginusername">Gender:  </label><input type="radio" id="genderinput" name="gender" value="Male" ><label id="genlabel">Male</label>
 	<input type="radio" name="gender" value="Female"><label id="genlabel">Female</label>
 	<br><br>
-	<label id="loginusername">Age:  </label><input type="number" name="age" id="ageinput" placeholder="13~90" min="13" max="90"><br><br><center>
+	<label id="loginusername">Age:  </label><input type="number" name="age" id="ageinput" placeholder="<?php echo $aerr; ?>" min="13" max="90"><br><br><center>
 	<input type="submit" name="signin" value="Sign Up" id="signbut"></center>
 
 
